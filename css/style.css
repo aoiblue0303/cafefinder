@@ -592,7 +592,7 @@ input[type=button]:hover {
           flex-wrap: wrap;
   gap: 28px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .main .fv_circle {
     display: -webkit-box;
     display: -webkit-flex;
@@ -806,6 +806,11 @@ input[type=button]:hover {
 }
 @media screen and (max-width: 768px) {
   .recommend_box_card {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .recommend_box_card {
     width: 100%;
   }
 }
@@ -838,6 +843,7 @@ input[type=button]:hover {
 .recommend_box_card_access {
   margin-top: 14px;
   width: 137px;
+  max-width: 100%;
   border: 1px solid #5d261b;
   border-radius: 20px;
   padding-right: 10px;
@@ -876,13 +882,23 @@ input[type=button]:hover {
   background-color: #9b837f;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+.photo {
+  background-color: #5d261b;
+}
+.photo_pc {
+  display: block;
 }
 @media screen and (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
+  .photo_pc {
+    display: none;
+  }
+}
+.photo_tbsp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .photo_tbsp {
+    display: block;
   }
 }
 

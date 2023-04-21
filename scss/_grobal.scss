@@ -396,6 +396,9 @@ input[type="button"]:hover {
             width: 24%;
             padding: 24px 30px 24px 30px;
             @media screen and (max-width:$break-point-tb) {
+                width: 50%;
+            }
+            @media screen and (max-width:$break-point-sp) {
                 width: 100%;
             }
             h3 {
@@ -428,6 +431,7 @@ input[type="button"]:hover {
             &_access {
                 margin-top: 14px;
                 width: 137px;
+                max-width: 100%;
                 border: 1px solid $color-sub;
                 border-radius: 20px;
                 padding-right: 10px;
@@ -464,11 +468,19 @@ input[type="button"]:hover {
         }
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    @media screen and (max-width:$break-point-tb) {
-        grid-template-columns: 1fr 1fr;
+.photo {
+    background-color: $color-sub;
+    &_pc {
+        display: block;
+        @media screen and (max-width:$break-point-tb) {
+            display: none;
+        }
+    }
+    &_tbsp {
+        display: none;
+        @media screen and (max-width:$break-point-tb) {
+            display: block;
+        }
     }
 }
 
